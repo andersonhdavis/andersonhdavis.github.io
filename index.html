@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anderson Davis | Mechanical Engineering Portfolio</title>
+<meta name="description" content="Engineering portfolio of Anderson Davis, mechanical engineering senior at the University of Notre Dame: design, prototyping, and test.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Anderson Davis</a>
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="assets/Anderson_Davis_Resume.pdf">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Mechanical Engineering &middot; University of Notre Dame, May 2027</p>
+    <h1>Anderson Davis</h1>
+    <p class="lede">I design, build, and test mechanical systems, from first CAD model to a prototype that passes verification. I'm looking for a full-time mechanical engineering role in medical devices.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="assets/Anderson_Davis_Resume.pdf">Download resume</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/andersondavis">LinkedIn</a>
+      <a class="btn btn-ghost" href="mailto:andersonhdavis@gmail.com">Email</a>
+    </div>
+    <ul class="facts">
+      <li><strong>3.9</strong><span>GPA, Tau Beta Pi</span></li>
+      <li><strong>CTS Corporation</strong><span>Mechanical engineering intern, 2026</span></li>
+      <li><strong>Division I</strong><span>Notre Dame Men's Lacrosse</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="wrap">
+  <h2 class="section-title">Projects</h2>
+
+  <!-- Project 1 -->
+  <article class="project">
+    <p class="tag">Senior design &middot; Team of 5 &middot; August 2026 to present</p>
+    <h3>Automated Multi-Powder Vial-Filling System</h3>
+    <p class="summary">A machine that weighs out powders for lab experiments. Weighing solids by hand slows down iterative lab work; this fills 24 vials with 3 powders from a recipe so a lab can run more experiments.</p>
+    <div class="cols">
+      <div class="text">
+        <ul class="points">
+          <li><strong>CAD.</strong> Designed the full machine in SolidWorks: 148 components and 45 unique parts, including the feeders, chutes, vial carousel, and frame.</li>
+          <li><strong>Manufacturing.</strong> Parts are a mix of machined aluminum, resin prints, and purchased stock. When the housings came back with different bores, I re-sized the augers to match.</li>
+          <li><strong>Precision.</strong> The fine feeder is designed to meter 5 mg doses within &plusmn;1 mg and the coarse feeder 10 g within &plusmn;5%. Dose testing is next.</li>
+          <li><strong>Modeling.</strong> Wrote a Python model of feeder output to compare screw geometries, then checked it against the CEMA screw-conveyor formula and my CAD before parts were made.</li>
+        </ul>
+        <p class="note"><strong>Working with AI.</strong> Used Claude to write the model code and compare design options, then verified its output against an independent formula and my own CAD, catching dimension errors before parts were made. The decisions stayed mine.</p>
+      </div>
+      <div class="media">
+        <figure>
+          <img src="assets/dispenser-cad.png" alt="SolidWorks assembly of the vial-filling machine: three powder feeders above a 24-vial carousel on a base plate." width="477" height="381" loading="lazy">
+          <figcaption>SolidWorks assembly: three powder feeders above a 24-vial carousel.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/dispenser-trade-study.png" alt="Two contour plots from a Python sweep of screw pitch and flight diameter for the coarse and fine feeders, with the feasible region shaded." width="2039" height="780" loading="lazy">
+          <figcaption>Python sweep of screw geometry. The shaded region meets the dose, time, and print limits.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project 2 -->
+  <article class="project">
+    <p class="tag">CTS Corporation internship &middot; eBrake team &middot; Summer 2026</p>
+    <h3>Electro-Mechanical Brake Pedal: Prototype Build and Testing</h3>
+    <p class="summary">Owned the first-article prototype build and test program for a newly designed electro-mechanical brake pedal. Images are omitted because the design is confidential.</p>
+    <div class="cols">
+      <div class="text">
+        <ul class="points">
+          <li><strong>Sensor interface.</strong> Refined the mechanical-to-electrical sensor interface through iterative testing, improving signal reliability.</li>
+          <li><strong>Build documentation.</strong> Wrote the prototype build instructions and control plan to cut build errors and scrap.</li>
+          <li><strong>Corrosion testing.</strong> Ran comparative salt fog testing of spring coatings per ASTM B117 and presented a recommendation that engineering leadership adopted.</li>
+          <li><strong>Drawings and DFM.</strong> Created and reviewed part drawings with GD&amp;T and gave manufacturability input on injection-molded parts.</li>
+          <li><strong>Delivery.</strong> Delivered conforming samples on schedule for customer field validation in test vehicles.</li>
+        </ul>
+      </div>
+      <div class="media">
+        <ol class="flow" aria-label="Signal chain and test coverage">
+          <li>
+            <span class="flow-kicker">Mechanical input</span>
+            <strong>Brake pedal assembly</strong>
+            <span>Pedal force and travel &middot; Return spring durability</span>
+          </li>
+          <li>
+            <span class="flow-kicker">Transduction</span>
+            <strong>Hall-effect sensor</strong>
+            <span>Non-contacting sensing &middot; Magnetic field tracking</span>
+          </li>
+          <li>
+            <span class="flow-kicker">Electrical verification</span>
+            <strong>Redundant sensor output</strong>
+            <span>Functional-safety channel check &middot; Digital/serial signals &middot; Noise and offset testing &middot; Signal drift isolation</span>
+          </li>
+          <li>
+            <span class="flow-kicker">Reliability and quality</span>
+            <strong>Environmental testing</strong>
+            <span>ASTM B117 salt fog &middot; Coating durability &middot; Scrap rate reduction &middot; Control plan compliance</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project 3 -->
+  <article class="project">
+    <p class="tag">Class project &middot; Controls &middot; April 2026</p>
+    <h3>Inverted Pendulum Control System</h3>
+    <p class="summary">Arduino control of a motor-driven pendulum: balance it upright and move it between set angles within overshoot and settling-time requirements.</p>
+    <div class="cols">
+      <div class="text">
+        <ul class="points">
+          <li><strong>Approach.</strong> Modeled the system and tuned a lead-lag compensator in MATLAB, then added feedforward to the feedback loop for point-to-point moves.</li>
+          <li><strong>Result.</strong> Feedforward cut transient error by 65% across several angles. The pendulum also recovered quickly from hard external pushes with little steady-state error.</li>
+          <li><strong>Testing.</strong> Tuned and validated on the physical rig.</li>
+        </ul>
+        <figure>
+          <img src="assets/pendulum-schematic.png" alt="Schematic of the test rig: an Arduino closed-loop controller sends a motor command to a DC motor carrying a metal rod, with rotary encoder angle feedback." width="1720" height="740" loading="lazy">
+          <figcaption>Schematic of the test rig.</figcaption>
+        </figure>
+      </div>
+      <div class="media">
+        <figure>
+          <img src="assets/pendulum-tracking.png" alt="Plot of pendulum angle over time for point-to-point moves, comparing the response with and without feedforward." width="1032" height="670" loading="lazy">
+          <figcaption>Point-to-point tracking with feedforward (blue) and without (red).</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project 4 -->
+  <article class="project">
+    <p class="tag">Class project &middot; Fall 2025</p>
+    <h3>Remote Control Rescue Robot</h3>
+    <p class="summary">Designed and built from concept to working prototype, using motion studies to fix the design before building it.</p>
+    <div class="cols">
+      <div class="text">
+        <ul class="points">
+          <li><strong>Problem.</strong> Early SolidWorks motion studies showed the chassis bottoming out on the ramp and obstacles.</li>
+          <li><strong>Fix.</strong> Increased wheel diameter from 96 mm to 120 mm and resized the chassis to get the ground clearance back.</li>
+          <li><strong>Motor selection.</strong> Simulated 223, 312, and 435 RPM DC motors and chose 312 RPM as the best balance of climbing torque and speed.</li>
+          <li><strong>Result.</strong> The built robot completed the physical obstacle course, matching the simulation.</li>
+        </ul>
+        <div class="pair">
+          <figure>
+            <img src="assets/robot-cad.png" alt="SolidWorks model of the rescue robot: a wood deck on a perforated metal frame with two rear wheels, two omni wheels, and a blue electronics enclosure." width="1008" height="698" loading="lazy">
+            <figcaption>As designed</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/robot-built.png" alt="Photo of the built rescue robot on a lab floor, matching the CAD model, with wiring and receiver on the deck." width="678" height="588" loading="lazy">
+            <figcaption>As built</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="media">
+        <figure>
+          <div class="video">
+            <iframe src="https://drive.google.com/file/d/1uxIJ-IRsgHxHhGFFXbq3LLOCAn1-Jn-R/preview" title="Video of the built rescue robot in action" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          <figcaption>The built robot in action.</figcaption>
+        </figure>
+        <figure>
+          <a href="https://youtu.be/SlRCioWOGZE">
+            <img src="assets/robot-motion-study.png" alt="Frame from the SolidWorks motion study: the robot drives along a test course with a ramp, a speed bump, and traffic cones." width="560" height="240" loading="lazy">
+          </a>
+          <figcaption>SolidWorks motion study on the test course. Videos:
+            <a href="https://youtu.be/SlRCioWOGZE">final design</a>,
+            <a href="https://youtu.be/9ONFOZANOck">223 RPM</a>,
+            <a href="https://youtu.be/Fi5iFQDLG90">312 RPM</a>,
+            <a href="https://youtu.be/188B42bNw-s">435 RPM</a>.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project 5 -->
+  <article class="project">
+    <p class="tag">Individual lab project &middot; Thermal design and simulation &middot; Fall 2025</p>
+    <h3>Heat Sink Redesign with a Validated Flow Simulation</h3>
+    <p class="summary">Validated a SolidWorks Flow Simulation model against test data, then used the model to redesign the part under mass and volume limits.</p>
+    <div class="cols">
+      <div class="text">
+        <ul class="points">
+          <li><strong>Test.</strong> Ran an aluminum heat sink on a 1.04 W film heater, logging base temperature with a thermistor and imaging it with a thermal camera.</li>
+          <li><strong>Validation.</strong> The simulation predicted the base temperature within 2 K of the measurement (316.8 K vs. 315.2 K), confirmed with a mesh refinement study.</li>
+          <li><strong>Design.</strong> Simulated four redesigns. Switching to copper and adding fins both ran hotter; taller fins ran cooler.</li>
+          <li><strong>Result.</strong> The chosen design lowered the average base temperature by 6.5 K (316.8 K to 310.3 K) while staying inside the constraints.</li>
+        </ul>
+        <div class="pair">
+          <figure>
+            <img src="assets/heatsink-design.png" alt="SolidWorks model of the chosen heat sink design with taller fins." width="922" height="994" loading="lazy">
+            <figcaption>Chosen design</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/heatsink-sim-final.png" alt="SolidWorks Flow Simulation temperature contours on the chosen heat sink design." width="1434" height="1164" loading="lazy">
+            <figcaption>Simulated temperatures</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="media">
+        <figure>
+          <img src="assets/heatsink-thermal.jpg" alt="Thermal camera image of the original heat sink at steady state, reading 27.5 to 41.1 degrees Celsius." width="640" height="480" loading="lazy">
+          <figcaption>Thermal camera image of the original heat sink at steady state.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/heatsink-sim-original.png" alt="SolidWorks Flow Simulation temperature contours on the original heat sink." width="1232" height="1026" loading="lazy">
+          <figcaption>The simulation of the same heat sink, within 2 K of the measurement.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project 6 -->
+  <article class="project">
+    <p class="tag">Team lab project &middot; Structural design, build and test &middot; Fall 2025</p>
+    <h3>Foam-Core Beam: Design, Build, and Test to Failure</h3>
+    <p class="summary">Two design iterations of a foam-board beam, tested to failure in three-point bending and redesigned from the failure mode. I led the design, build, and analysis for the team.</p>
+    <div class="cols">
+      <div class="text">
+        <ul class="points">
+          <li><strong>Goal.</strong> Design and build a beam from one sheet of foam board and four glue sticks to carry the highest load in three-point bending.</li>
+          <li><strong>First design.</strong> A laser-cut I-beam sized from shear and moment diagrams. It held 68 lbf and failed by tensile cracking at mid-span.</li>
+          <li><strong>Redesign.</strong> Spaced the center webs apart to stabilize the beam laterally and put more material under the load point.</li>
+          <li><strong>Result.</strong> The second beam held 104 lbf, a 53% increase, measured on an ATS load frame.</li>
+        </ul>
+        <div class="pair">
+          <figure>
+            <img src="assets/beam-first.jpg" alt="Photo of the first foam-core beam in a three-point bending fixture with a crack through the web at mid-span." width="1200" height="899" loading="lazy">
+            <figcaption>First design: mid-span crack</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/beam-redesign.jpg" alt="Close-up photo of the redesigned beam with spaced center webs crushed under the load nose." width="900" height="1200" loading="lazy">
+            <figcaption>Redesign: bearing failure</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="media">
+        <figure>
+          <img src="assets/beam-plot.png" alt="Plot of load versus mid-span displacement: the first design peaks at 68 pounds-force and the redesign at 104." width="1280" height="800" loading="lazy">
+          <figcaption>Load vs. displacement in three-point bending, replotted from the test data.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="skills" class="band">
+  <div class="wrap">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Design and analysis</h3>
+        <p>SolidWorks, Solid Edge, Ansys FEA, SolidWorks Flow Simulation, motion studies, GD&amp;T, tolerance stack-up analysis, DFM for injection molding, CNC, and additive.</p>
+      </div>
+      <div>
+        <h3>Test and quality</h3>
+        <p>Prototype build and test, root cause analysis, control plans, build instructions, ASTM B117 salt fog testing.</p>
+      </div>
+      <div>
+        <h3>Controls and programming</h3>
+        <p>MATLAB, Python, C++, Arduino, closed-loop control tuning, motor drivers, sensor signal conditioning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="wrap contact">
+  <h2 class="section-title">Contact</h2>
+  <p>I'm graduating in May 2027 and looking for full-time mechanical engineering roles in medical devices. The fastest way to reach me is email.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="mailto:andersonhdavis@gmail.com">andersonhdavis@gmail.com</a>
+    <a class="btn btn-outline" href="https://www.linkedin.com/in/andersondavis">LinkedIn</a>
+    <a class="btn btn-outline" href="assets/Anderson_Davis_Resume.pdf">Resume (PDF)</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">Anderson Davis &middot; South Bend, IN</div>
+</footer>
+
+</body>
+</html>
