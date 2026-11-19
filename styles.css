@@ -61,12 +61,11 @@ h1, h2, h3 { color: var(--navy); line-height: 1.2; margin: 0; }
 .btn-outline:hover { border-color: var(--navy); }
 
 .facts {
-  list-style: none; padding: 0; margin: 44px 0 0;
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 560px;
+  list-style: none; padding: 20px 0 0; margin: 40px 0 0;
+  border-top: 1px solid #334155; max-width: 640px;
+  color: #cbd5e1; font-size: 1rem; line-height: 1.5;
 }
-.facts li { border-top: 1px solid #334155; padding-top: 14px; }
-.facts strong { display: block; color: #fff; font-size: 1.15rem; }
-.facts span { color: #94a3b8; font-size: 0.9rem; }
+.facts li { margin: 0 0 6px; }
 
 /* Sections */
 .section-title { font-size: 1.7rem; margin: 64px 0 24px; }
@@ -150,7 +149,6 @@ figcaption { color: var(--muted); font-size: 0.85rem; font-style: italic; margin
 @media (max-width: 820px) {
   .cols { grid-template-columns: 1fr; gap: 24px; }
   .skills { grid-template-columns: 1fr; gap: 20px; }
-  .facts { grid-template-columns: 1fr; }
   .project { padding: 22px 18px; }
   .hero { padding: 48px 0 44px; }
   .section-title { margin-top: 44px; }
