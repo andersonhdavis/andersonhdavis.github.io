@@ -66,6 +66,7 @@ h1, h2, h3 { color: var(--navy); line-height: 1.2; margin: 0; }
   color: #cbd5e1; font-size: 1rem; line-height: 1.5;
 }
 .facts li { margin: 0 0 6px; }
+.facts strong { color: #fff; font-weight: 600; }
 
 /* Sections */
 .section-title { font-size: 1.7rem; margin: 64px 0 24px; }
