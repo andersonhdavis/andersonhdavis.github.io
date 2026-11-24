@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Anderson Davis | Mechanical Engineering Portfolio</title>
 <meta name="description" content="Engineering portfolio of Anderson Davis, mechanical engineering senior at the University of Notre Dame: design, prototyping, and test.">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
   <div class="wrap">
     <p class="eyebrow">Mechanical Engineering &middot; University of Notre Dame, May 2027</p>
     <h1>Anderson Davis</h1>
-    <p class="lede">I design, build, and test mechanical systems, from first CAD model to a prototype that passes verification. I'm looking for a full-time mechanical engineering role in medical devices.</p>
+    <p class="lede">I design, build, and test mechanical systems, from first CAD model to a tested prototype. I'm looking for a full-time mechanical engineering role in medical devices.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="assets/Anderson_Davis_Resume.pdf">Download resume</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/andersondavis">LinkedIn</a>
@@ -53,7 +53,7 @@
         <ul class="points">
           <li><strong>CAD.</strong> Designed the full machine in SolidWorks: 148 components and 45 unique parts, including the feeders, chutes, vial carousel, and frame.</li>
           <li><strong>Manufacturing.</strong> Parts are a mix of machined aluminum, resin prints, and purchased stock. When the housings came back with different bores, I re-sized the augers to match.</li>
-          <li><strong>Precision.</strong> The fine feeder is designed to meter 5 mg doses within &plusmn;1 mg and the coarse feeder 10 g within &plusmn;5%. Dose testing is next.</li>
+          <li><strong>Precision.</strong> The fine feeder is designed to meter 5 mg doses within &plusmn;1 mg and the coarse feeder 10 g within &plusmn;5%. The machine is built; verification against these targets is tracked in the table below.</li>
           <li><strong>Modeling.</strong> Wrote a Python model of feeder output to compare screw geometries, then checked it against the CEMA screw-conveyor formula and my CAD before parts were made.</li>
         </ul>
         <p class="note"><strong>Working with AI.</strong> Used Claude to write the model code and compare design options, then verified its output against an independent formula and my own CAD, catching dimension errors before parts were made. The decisions stayed mine.</p>
@@ -68,6 +68,25 @@
           <figcaption>Python sweep of screw geometry. The shaded region meets the dose, time, and print limits.</figcaption>
         </figure>
       </div>
+    </div>
+    <div class="req">
+      <h4>Requirements and verification</h4>
+      <div class="req-scroll">
+        <table>
+          <thead>
+            <tr><th scope="col">Requirement</th><th scope="col">Target</th><th scope="col">How it's verified</th><th scope="col">Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Requirement">Fine dose accuracy</td><td data-label="Target">5 mg &plusmn; 1 mg</td><td data-label="How it's verified">Repeated doses checked on a 0.1 mg reference balance</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Coarse dose accuracy</td><td data-label="Target">10 g &plusmn; 5%</td><td data-label="How it's verified">Repeated doses checked on a 0.1 mg reference balance</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Cycle time</td><td data-label="Target">&le; 60 s per container</td><td data-label="How it's verified">Time 24 consecutive doses, from carousel move to log entry</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Unattended operation</td><td data-label="Target">Full 24-vial, 3-powder recipe; &ge; 45 min</td><td data-label="How it's verified">Run a complete recipe with no intervention</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Data logging</td><td data-label="Target">100% of doses exported to CSV</td><td data-label="How it's verified">Compare the exported log against physical weighings</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Budget</td><td data-label="Target">&le; $1,000</td><td data-label="How it's verified">Audit itemized receipts and print costs</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="req-note">Requirements come from the client's engineering specification. Status updates as test results come in.</p>
     </div>
   </article>
 
@@ -195,7 +214,7 @@
         <ul class="points">
           <li><strong>Test.</strong> Ran an aluminum heat sink on a 1.04 W film heater, logging base temperature with a thermistor and imaging it with a thermal camera.</li>
           <li><strong>Validation.</strong> The simulation predicted the base temperature within 2 K of the measurement (316.8 K vs. 315.2 K), confirmed with a mesh refinement study.</li>
-          <li><strong>Design.</strong> Simulated four redesigns. Switching to copper and adding fins both ran hotter; taller fins ran cooler.</li>
+          <li><strong>Design.</strong> Simulated four redesigns. Copper ran hotter because the mass limit forced its fins down to 10 mm, cutting surface area, and packing in more fins choked the airflow between them. Taller aluminum fins ran coolest.</li>
           <li><strong>Result.</strong> The chosen design lowered the average base temperature by 6.5 K (316.8 K to 310.3 K) while staying inside the constraints.</li>
         </ul>
         <div class="pair">
@@ -222,38 +241,12 @@
     </div>
   </article>
 
-  <!-- Project 6 -->
-  <article class="project">
-    <p class="tag">Team lab project &middot; Structural design, build and test &middot; Fall 2025</p>
-    <h3>Foam-Core Beam: Design, Build, and Test to Failure</h3>
-    <p class="summary">Two design iterations of a foam-board beam, tested to failure in three-point bending and redesigned from the failure mode. I led the design, build, and analysis for the team.</p>
-    <div class="cols">
-      <div class="text">
-        <ul class="points">
-          <li><strong>Goal.</strong> Design and build a beam from one sheet of foam board and four glue sticks to carry the highest load in three-point bending.</li>
-          <li><strong>First design.</strong> A laser-cut I-beam sized from shear and moment diagrams. It held 68 lbf and failed by tensile cracking at mid-span.</li>
-          <li><strong>Redesign.</strong> Spaced the center webs apart to stabilize the beam laterally and put more material under the load point.</li>
-          <li><strong>Result.</strong> The second beam held 104 lbf, a 53% increase, measured on an ATS load frame.</li>
-        </ul>
-        <div class="pair">
-          <figure>
-            <a class="zoom" href="assets/beam-first.jpg" aria-label="View full-size image"><img src="assets/beam-first.jpg" alt="Photo of the first foam-core beam in a three-point bending fixture with a crack through the web at mid-span." width="1200" height="899" loading="lazy"></a>
-            <figcaption>First design: mid-span crack</figcaption>
-          </figure>
-          <figure>
-            <a class="zoom" href="assets/beam-redesign.jpg" aria-label="View full-size image"><img src="assets/beam-redesign.jpg" alt="Close-up photo of the redesigned beam with spaced center webs crushed under the load nose." width="900" height="1200" loading="lazy"></a>
-            <figcaption>Redesign: bearing failure</figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="media">
-        <figure>
-          <a class="zoom" href="assets/beam-plot.png" aria-label="View full-size image"><img src="assets/beam-plot.png" alt="Plot of load versus mid-span displacement: the first design peaks at 68 pounds-force and the redesign at 104." width="1280" height="800" loading="lazy"></a>
-          <figcaption>Load vs. displacement in three-point bending, replotted from the test data.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </article>
+  <div class="other">
+    <h3>Other projects</h3>
+    <ul>
+      <li><strong>Foam-core beam, fall 2025.</strong> Led a team lab that designed, built, and tested a foam-board beam to failure in three-point bending. Redesigned from the first beam's failure mode, raising peak load 53%, from 68 to 104 lbf.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="skills" class="band">
