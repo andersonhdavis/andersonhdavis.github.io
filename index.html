@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Anderson Davis | Mechanical Engineering Portfolio</title>
 <meta name="description" content="Engineering portfolio of Anderson Davis, mechanical engineering senior at the University of Notre Dame: design, prototyping, and test.">
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 
@@ -48,6 +48,7 @@
     <p class="tag">Senior design &middot; Team of 5 &middot; August 2026 to present</p>
     <h3>Automated Multi-Powder Vial-Filling System</h3>
     <p class="summary">A machine that weighs out powders for lab experiments. Weighing solids by hand slows down iterative lab work; this fills 24 vials with 3 powders from a recipe so a lab can run more experiments.</p>
+    <p class="role"><strong>My role:</strong> design lead, owning the mechanical design and CAD, and backup electronics lead for controls and the user interface.</p>
     <div class="cols">
       <div class="text">
         <ul class="points">
@@ -77,12 +78,11 @@
             <tr><th scope="col">Requirement</th><th scope="col">Target</th><th scope="col">How it's verified</th><th scope="col">Status</th></tr>
           </thead>
           <tbody>
-            <tr><td data-label="Requirement">Fine dose accuracy</td><td data-label="Target">5 mg &plusmn; 1 mg</td><td data-label="How it's verified">Repeated doses checked on a 0.1 mg reference balance</td><td data-label="Status"><span class="status">Pending</span></td></tr>
-            <tr><td data-label="Requirement">Coarse dose accuracy</td><td data-label="Target">10 g &plusmn; 5%</td><td data-label="How it's verified">Repeated doses checked on a 0.1 mg reference balance</td><td data-label="Status"><span class="status">Pending</span></td></tr>
-            <tr><td data-label="Requirement">Cycle time</td><td data-label="Target">&le; 60 s per container</td><td data-label="How it's verified">Time 24 consecutive doses, from carousel move to log entry</td><td data-label="Status"><span class="status">Pending</span></td></tr>
-            <tr><td data-label="Requirement">Unattended operation</td><td data-label="Target">Full 24-vial, 3-powder recipe; &ge; 45 min</td><td data-label="How it's verified">Run a complete recipe with no intervention</td><td data-label="Status"><span class="status">Pending</span></td></tr>
-            <tr><td data-label="Requirement">Data logging</td><td data-label="Target">100% of doses exported to CSV</td><td data-label="How it's verified">Compare the exported log against physical weighings</td><td data-label="Status"><span class="status">Pending</span></td></tr>
-            <tr><td data-label="Requirement">Budget</td><td data-label="Target">&le; $1,000</td><td data-label="How it's verified">Audit itemized receipts and print costs</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Fine dose accuracy</td><td data-label="Target">5 mg &plusmn; 1 mg</td><td data-label="How it's verified">n = 15 fine doses, each weighed on a 0.1 mg reference balance. Pass: every dose within 5 &plusmn; 1 mg</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Coarse dose accuracy</td><td data-label="Target">10 g &plusmn; 5%</td><td data-label="How it's verified">n = 15 coarse doses, each weighed on a 0.1 mg reference balance. Pass: every dose within 10 g &plusmn; 5%</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Cycle time</td><td data-label="Target">&le; 60 s per container</td><td data-label="How it's verified">n = 24 consecutive doses, timed from carousel move to log entry. Pass: every cycle &le; 60 s</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Unattended operation</td><td data-label="Target">Full 24-vial, 3-powder recipe; &ge; 45 min</td><td data-label="How it's verified">n = 1 full recipe run. Pass: all 24 vials completed with no intervention</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Data logging</td><td data-label="Target">100% of doses exported to CSV</td><td data-label="How it's verified">All doses from the full run. Pass: CSV values match physical weighings for 100% of doses</td><td data-label="Status"><span class="status">Pending</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -98,12 +98,12 @@
     <div class="cols">
       <div class="text">
         <ul class="points">
-          <li><strong>Root cause.</strong> The sensor output was wrong over the first few millimeters of pedal travel. I traced it to a misalignment at the pedal's rest position that shifted the sensor's axis of rotation.</li>
-          <li><strong>Fix.</strong> Corrected the alignment on the customer samples, redesigned an undersized coupler arm as a stiffer part to reduce hysteresis, and identified a long-term design fix.</li>
-          <li><strong>Builds.</strong> Built and tested 4 prototype pedals, with SLS-printed parts standing in for the planned injection-molded ones. Two shipped for vehicle testing and two stayed for continued testing. I also built or retrofitted 10&ndash;20 pedals of existing designs for customer samples.</li>
+          <li><strong>Root cause.</strong> Traced an error in the pedal's sensor output to a mechanical misalignment in the assembly.</li>
+          <li><strong>Fix.</strong> Corrected the misalignment and redesigned an undersized linkage part as a stiffer component, roughly halving output hysteresis, then identified a long-term design fix.</li>
+          <li><strong>Builds.</strong> Built and tested 4 prototype pedals, with SLS-printed parts standing in for the planned injection-molded ones. Two shipped for vehicle testing and two stayed for continued testing. I also built or retrofitted more than 10 pedals of existing designs for customer samples.</li>
           <li><strong>Corrosion testing.</strong> Ran a 96-hour ASTM B117 salt fog test comparing two spring coatings on two dual-stage spring designs. The selected coating held a more stable stage transition point and higher average stiffness, and the team adopted it.</li>
           <li><strong>Documentation.</strong> Wrote build instruction templates for the fully redesigned next-generation pedal, editable by bill of materials and sensor placement, plus the prototype control plan and unit traceability records.</li>
-          <li><strong>Design.</strong> Designed a stage 1 return spring with the highest stiffness on the program to date, using a tolerance stack-up. Created part drawings with GD&amp;T and designed 3D-printed sensor connector enclosures.</li>
+          <li><strong>Design.</strong> Designed a stage 1 return spring with the highest stiffness on the program to date, helping a springs-only pedal better match the feel of a hydraulic brake. Sized it with a tolerance stack-up, created part drawings with GD&amp;T, and designed 3D-printed sensor connector enclosures.</li>
         </ul>
         <p class="note"><strong>Why it matters for medical devices.</strong> The same disciplines carry over directly: root-cause analysis, verification testing to a published standard, controlled build documentation, and unit traceability.</p>
       </div>
@@ -113,7 +113,7 @@
           <li>
             <span class="flow-kicker">Sensor output vs. pedal travel</span>
             <strong>Iterative bench testing, 4 prototypes</strong>
-            <span>Traced an output error to a misalignment at the rest position. Corrected it and added a stiffer coupler arm, which reduced hysteresis.</span>
+            <span>Traced an output error to a mechanical misalignment. Corrected it and stiffened a linkage part, roughly halving hysteresis.</span>
           </li>
           <li>
             <span class="flow-kicker">Salt fog, ASTM B117, 96 hours</span>
@@ -122,7 +122,7 @@
           </li>
           <li>
             <span class="flow-kicker">Customer sample builds</span>
-            <strong>4 new prototypes plus 10&ndash;20 existing-design pedals</strong>
+            <strong>4 new prototypes plus 10+ existing-design pedals</strong>
             <span>Two prototypes shipped for vehicle testing, each with traceability records.</span>
           </li>
         </ol>
@@ -253,7 +253,7 @@
     <div class="skills">
       <div>
         <h3>Design and analysis</h3>
-        <p>SolidWorks, Solid Edge, Ansys FEA, SolidWorks Flow Simulation, motion studies, GD&amp;T, tolerance stack-up analysis, DFM for injection molding, CNC, and additive.</p>
+        <p>SolidWorks, Solid Edge, SolidWorks Flow Simulation, motion studies, GD&amp;T, tolerance stack-up analysis, DFM (injection molding, CNC, additive), Ansys FEA.</p>
       </div>
       <div>
         <h3>Test and quality</h3>
