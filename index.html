@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Anderson Davis | Mechanical Engineering Portfolio</title>
 <meta name="description" content="Engineering portfolio of Anderson Davis, mechanical engineering senior at the University of Notre Dame: design, prototyping, and test.">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -94,38 +94,36 @@
   <article class="project">
     <p class="tag">CTS Corporation internship &middot; eBrake team &middot; Summer 2026</p>
     <h3>Electro-Mechanical Brake Pedal: Prototype Build and Testing</h3>
-    <p class="summary">Owned the first-article prototype build and test program for a newly designed electro-mechanical brake pedal. Images are omitted because the design is confidential.</p>
+    <p class="summary">Owned the prototype build and test program for a next-generation electro-mechanical brake pedal, preparing samples for a Tier 1 supplier's test vehicles. Images are omitted because the design is confidential.</p>
     <div class="cols">
       <div class="text">
         <ul class="points">
-          <li><strong>Sensor interface.</strong> Refined the mechanical-to-electrical sensor interface through iterative testing, improving signal reliability.</li>
-          <li><strong>Build documentation.</strong> Wrote the prototype build instructions and control plan to cut build errors and scrap.</li>
-          <li><strong>Corrosion testing.</strong> Ran comparative salt fog testing of spring coatings per ASTM B117 and presented a recommendation that engineering leadership adopted.</li>
-          <li><strong>Drawings and DFM.</strong> Created and reviewed part drawings with GD&amp;T and gave manufacturability input on injection-molded parts.</li>
-          <li><strong>Delivery.</strong> Delivered conforming samples on schedule for customer field validation in test vehicles.</li>
+          <li><strong>Root cause.</strong> The sensor output was wrong over the first few millimeters of pedal travel. I traced it to a misalignment at the pedal's rest position that shifted the sensor's axis of rotation.</li>
+          <li><strong>Fix.</strong> Corrected the alignment on the customer samples, redesigned an undersized coupler arm as a stiffer part to reduce hysteresis, and identified a long-term design fix.</li>
+          <li><strong>Builds.</strong> Built and tested 4 prototype pedals, with SLS-printed parts standing in for the planned injection-molded ones. Two shipped for vehicle testing and two stayed for continued testing. I also built or retrofitted 10&ndash;20 pedals of existing designs for customer samples.</li>
+          <li><strong>Corrosion testing.</strong> Ran a 96-hour ASTM B117 salt fog test comparing two spring coatings on two dual-stage spring designs. The selected coating held a more stable stage transition point and higher average stiffness, and the team adopted it.</li>
+          <li><strong>Documentation.</strong> Wrote build instruction templates for the fully redesigned next-generation pedal, editable by bill of materials and sensor placement, plus the prototype control plan and unit traceability records.</li>
+          <li><strong>Design.</strong> Designed a stage 1 return spring with the highest stiffness on the program to date, using a tolerance stack-up. Created part drawings with GD&amp;T and designed 3D-printed sensor connector enclosures.</li>
         </ul>
+        <p class="note"><strong>Why it matters for medical devices.</strong> The same disciplines carry over directly: root-cause analysis, verification testing to a published standard, controlled build documentation, and unit traceability.</p>
       </div>
       <div class="media">
-        <ol class="flow" aria-label="Signal chain and test coverage">
+        <h4 class="side-title">Test summary</h4>
+        <ol class="flow" aria-label="Test summary">
           <li>
-            <span class="flow-kicker">Mechanical input</span>
-            <strong>Brake pedal assembly</strong>
-            <span>Pedal force and travel &middot; Return spring durability</span>
+            <span class="flow-kicker">Sensor output vs. pedal travel</span>
+            <strong>Iterative bench testing, 4 prototypes</strong>
+            <span>Traced an output error to a misalignment at the rest position. Corrected it and added a stiffer coupler arm, which reduced hysteresis.</span>
           </li>
           <li>
-            <span class="flow-kicker">Transduction</span>
-            <strong>Hall-effect sensor</strong>
-            <span>Non-contacting sensing &middot; Magnetic field tracking</span>
+            <span class="flow-kicker">Salt fog, ASTM B117, 96 hours</span>
+            <strong>2 spring designs &times; 2 coatings, 12 samples each</strong>
+            <span>8 samples per group measured before and after exposure. Selected coating chosen for its more stable transition point and higher stiffness.</span>
           </li>
           <li>
-            <span class="flow-kicker">Electrical verification</span>
-            <strong>Redundant sensor output</strong>
-            <span>Functional-safety channel check &middot; Digital/serial signals &middot; Noise and offset testing &middot; Signal drift isolation</span>
-          </li>
-          <li>
-            <span class="flow-kicker">Reliability and quality</span>
-            <strong>Environmental testing</strong>
-            <span>ASTM B117 salt fog &middot; Coating durability &middot; Scrap rate reduction &middot; Control plan compliance</span>
+            <span class="flow-kicker">Customer sample builds</span>
+            <strong>4 new prototypes plus 10&ndash;20 existing-design pedals</strong>
+            <span>Two prototypes shipped for vehicle testing, each with traceability records.</span>
           </li>
         </ol>
       </div>
