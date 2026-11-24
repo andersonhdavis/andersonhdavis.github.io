@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Anderson Davis | Mechanical Engineering Portfolio</title>
 <meta name="description" content="Engineering portfolio of Anderson Davis, mechanical engineering senior at the University of Notre Dame: design, prototyping, and test.">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 
@@ -54,7 +54,7 @@
         <ul class="points">
           <li><strong>CAD.</strong> Designed the full machine in SolidWorks: 148 components and 45 unique parts, including the feeders, chutes, vial carousel, and frame.</li>
           <li><strong>Manufacturing.</strong> Parts are a mix of machined aluminum, resin prints, and purchased stock. When the housings came back with different bores, I re-sized the augers to match.</li>
-          <li><strong>Precision.</strong> The fine feeder is designed to meter 5 mg doses within &plusmn;1 mg and the coarse feeder 10 g within &plusmn;5%. The machine is built; verification against these targets is tracked in the table below.</li>
+          <li><strong>Precision.</strong> The fine feeder is designed to meter 5 mg doses within &plusmn;1 mg and the coarse feeder 10 g within &plusmn;5%. The machine is built and met both targets in preliminary runs; formal verification is tracked in the table below.</li>
           <li><strong>Modeling.</strong> Wrote a Python model of feeder output to compare screw geometries, then checked it against the CEMA screw-conveyor formula and my CAD before parts were made.</li>
         </ul>
         <p class="note"><strong>Working with AI.</strong> Used Claude to write the model code and compare design options, then verified its output against an independent formula and my own CAD, catching dimension errors before parts were made. The decisions stayed mine.</p>
@@ -78,15 +78,15 @@
             <tr><th scope="col">Requirement</th><th scope="col">Target</th><th scope="col">How it's verified</th><th scope="col">Status</th></tr>
           </thead>
           <tbody>
-            <tr><td data-label="Requirement">Fine dose accuracy</td><td data-label="Target">5 mg &plusmn; 1 mg</td><td data-label="How it's verified">n = 22 fine doses (zero failures in 22 shows 90% reliability at 90% confidence), each weighed on a 0.1 mg reference balance. Pass: every dose within 5 &plusmn; 1 mg</td><td data-label="Status"><span class="status">Pending</span></td></tr>
-            <tr><td data-label="Requirement">Coarse dose accuracy</td><td data-label="Target">10 g &plusmn; 5%</td><td data-label="How it's verified">n = 22 coarse doses (same 90% / 90% basis), each weighed on a 0.1 mg reference balance. Pass: every dose within 10 g &plusmn; 5%</td><td data-label="Status"><span class="status">Pending</span></td></tr>
+            <tr><td data-label="Requirement">Fine dose accuracy</td><td data-label="Target">5 mg &plusmn; 1 mg</td><td data-label="How it's verified">n = 22 fine doses (zero failures in 22 shows 90% reliability at 90% confidence), each weighed on a 0.1 mg reference balance. Pass: every dose within 5 &plusmn; 1 mg</td><td data-label="Status"><span class="status prelim">Preliminary pass &middot; formal n = 22 pending</span></td></tr>
+            <tr><td data-label="Requirement">Coarse dose accuracy</td><td data-label="Target">10 g &plusmn; 5%</td><td data-label="How it's verified">n = 22 coarse doses (same 90% / 90% basis), each weighed on a 0.1 mg reference balance. Pass: every dose within 10 g &plusmn; 5%</td><td data-label="Status"><span class="status prelim">Preliminary pass &middot; formal n = 22 pending</span></td></tr>
             <tr><td data-label="Requirement">Cycle time</td><td data-label="Target">&le; 60 s per container</td><td data-label="How it's verified">n = 24 consecutive doses, timed from carousel move to log entry. Pass: every cycle &le; 60 s</td><td data-label="Status"><span class="status">Pending</span></td></tr>
             <tr><td data-label="Requirement">Unattended operation</td><td data-label="Target">Full 24-vial, 3-powder recipe; &ge; 45 min</td><td data-label="How it's verified">n = 1 full recipe run. Pass: all 24 vials completed with no intervention</td><td data-label="Status"><span class="status">Pending</span></td></tr>
             <tr><td data-label="Requirement">Data logging</td><td data-label="Target">100% of doses exported to CSV</td><td data-label="How it's verified">All doses from the full run. Pass: CSV values match physical weighings for 100% of doses</td><td data-label="Status"><span class="status">Pending</span></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="req-note">Requirements come from the client's engineering specification. Status updates as test results come in.</p>
+      <p class="req-note">Both dose targets were met in preliminary runs on the built machine; the formal 22-trial verification is next. Requirements come from the client's engineering specification, and status updates as test results come in.</p>
     </div>
   </article>
 
